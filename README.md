@@ -66,7 +66,7 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 ---
 
 ### **CT-05: Validar impedimento de cadastro duplicado**
-* **Dado** que já existe um curso cadastrado com o nome "Automação de Testes" e instrutor "Elton Costa"
+* **Dado** que já existe um curso cadastrado com o nome "Curso de Teste de QA" e instrutor "Elton Costa"
 * **Quand** tento cadastrar um novo curso com exatamente os mesmos dados (Nome e Instrutor)
 * **Então** o sistema deve exibir uma mensagem de alerta: "Este curso já está cadastrado"
 * **E** não deve permitir a criação do registro duplicado na listagem.
