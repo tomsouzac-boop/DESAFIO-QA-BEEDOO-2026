@@ -30,15 +30,29 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ---
 
-## 📝 Exemplos de Casos de Teste (BDD)
+## 📝 Cenários de Teste BDD
 
-**Cenário: Validar impedimento de cadastro com carga horária negativa**
-* **Dado** que estou no formulário de cadastro de curso
-* **Quando** preencho o nome "QA Especialista"
-* **E** insiro o valor "-10" no campo de carga horária
-* **E** clico em "Salvar"
-* **Então** o sistema deve exibir a mensagem de erro "Valor inválido"
-* **E** o curso não deve ser adicionado à listagem.
+### **CT-01: Cadastro de curso com sucesso**
+* **Dado** que estou na tela de "CADASTRAR CURSO"
+* **Quando** preencho o nome do curso, instrutor e carga horária válida
+* **E** clico no botão de salvar
+* **Então** o sistema deve exibir uma mensagem de confirmação
+* **E** redirecionar para a "LISTA DE CURSOS" exibindo o novo registro.
+
+---
+
+### **CT-02: Validação de campos obrigatórios**
+* **Dado** que estou no formulário de cadastro
+* **Quando** clico em salvar sem preencher nenhum campo
+* **Então** o sistema deve destacar os campos obrigatórios em vermelho
+* **E** impedir o envio dos dados.
+
+---
+
+### **CT-03: Busca/Filtro na listagem de cursos**
+* **Dado** que existem cursos cadastrados na "LISTA DE CURSOS"
+* **Quando** digito o nome de um curso específico no campo de busca
+* **Então** a tabela deve filtrar e exibir apenas os resultados correspondentes.
 
 ---
 
