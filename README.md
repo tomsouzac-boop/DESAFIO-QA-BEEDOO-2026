@@ -73,6 +73,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 * **Plano de Testes e Resultados de Execução**
 
 | ID        | Cenário de Teste                 | Status | Severidade | Observações                                         |
+|:---|:---|:---:|:---:|:---|
 | **CT-01** | Cadastro de curso com sucesso    | PASSOU | Baixa      | Fluxo executado conforme o esperado.                |
 | **CT-02** | Validação de campos obrigatórios | FALHOU | CRÍTICA    | Sistema permite salvar registros com campos vazios. |
 | **CT-03** | Listagem de cursos cadastrados   | PASSOU | Baixa      | Os cursos são exibidos corretamente na grid.        |
