@@ -123,10 +123,10 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 * **Severidade:** **CRÍTICA** (Impede o consumo do produto principal).
 * **Descrição:** Após o cadastro bem-sucedido de um curso, o card correspondente é renderizado na tela de "LISTA DE CURSOS", porém o título e o card não possuem um elemento de link funcional (`href`). Isso impossibilita que o usuário acesse os detalhes, lições ou a página interna do curso criado.
 * **Passos para Reproduzir:**
-    1.  Realizar o cadastro de um curso preenchendo os campos obrigatórios.
-    2.  Navegar até a tela de **"LISTA DE CURSOS"**.
-    3.  Tentar clicar no nome do curso ou sobre o card para abrir os detalhes.
-    4.  Observar que o cursor do mouse não altera para "pointer" (mãozinha) e nenhuma ação de redirecionamento é disparada.
+    1. Realizar o cadastro de um curso preenchendo os campos obrigatórios.
+    2. Navegar até a tela de **"LISTA DE CURSOS"**.
+    3. Tentar clicar no nome do curso ou sobre o card para abrir os detalhes.
+    4. Observar que o cursor do mouse não altera para "pointer" (mãozinha) e nenhuma ação de redirecionamento é disparada.
 * **Resultado Atual:** O registro é exibido visualmente na listagem, mas permanece como um elemento estático, sem gerar uma URL de acesso ou link de navegação.
 * **Resultado Esperado:** O título do curso (ou um botão específico de "Acessar") deve ser um hyperlink funcional que redirecione o usuário para a rota de detalhes (ex: `/detalhes-curso/ID_DO_CURSO`).
 * **Possível Causa Técnica:** Falha na lógica de renderização do Front-end, onde o ID retornado pela API não está sendo vinculado ao componente de link, ou ausência de configuração de rotas dinâmicas no projeto (SPA).
