@@ -51,8 +51,8 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ### **CT-03: Listagem de cursos**
 * **Dado** que existem cursos cadastrados na "LISTA DE CURSOS"
-* **Quando** Clico na “LISTA DE CURSOS”
-* **Então** Deverá aparecer os cursos cadastrados.
+* **Quando** acesso a tela "LISTA DE CURSOS"
+* **Então** o sistema deve exibir todos os cursos cadastrados.
 
 ---
 
@@ -122,7 +122,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 
 ### **BUG-03: Falha de Roteamento e Ausência de Link de Acesso (CT-06)**
 * **Severidade:** **CRÍTICA** (Impede o consumo do produto principal).
-* **Descrição:** Após o cadastro bem-sucedido de um curso, o card correspondente é renderizado na tela de "LISTA DE CURSOS", porém o título e o card não possuem um elemento de link funcional (`href`). Isso impossibilita que o usuário acesse os detalhes, lições ou a página interna do curso criado.
+* **Descrição:** Após o cadastro bem-sucedido de um curso, o card correspondente é renderizado na tela de "LISTA DE CURSOS", porém, o elemento do card não possui link navegável (href ou rota dinâmica). Isso impossibilita que o usuário acesse os detalhes, lições ou a página interna do curso criado.
 * **Passos para Reproduzir:**
     1. Realizar o cadastro de um curso preenchendo os campos obrigatórios.
     2. Navegar até a tela de **"LISTA DE CURSOS"**.
