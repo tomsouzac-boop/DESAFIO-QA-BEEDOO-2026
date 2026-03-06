@@ -57,7 +57,7 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 ---
 
 ### **CT-04: Excluir um curso com sucesso**
-* **Dado** que existe pelo menos um curso cadastrado na "LISTAR CURSOS"
+* **Dado** que existe pelo menos um curso cadastrado na "LISTA CURSOS"
 * **Quando** clico no botão de "Excluir" (ícone de lixeira) do curso desejado
 * **E** confirmo a exclusão na janela de alerta (pop-up)
 * **Então** o sistema deve exibir uma mensagem de sucesso: "Curso removido com sucesso"
@@ -104,8 +104,8 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 
 ### **BUG-01: Ausência de Validação em Campos Mandatórios (CT-02)**
 * **Severidade:** **CRÍTICA** (Impacta a integridade dos dados).
-* **Descrição:** O sistema não valida a presença de dados nos campos "Nome do Curso", "Descrição do curso"; "instrutor", "URL da imagem de capa", "Data de inicio", "Data de fim",
-  "Número de vagas", Tipo do curso", "Link de inscrição", permitindo o cadastro de cursos com informações em branco.
+* **Descrição:** O sistema não valida a presença de dados nos campos "Nome do Curso", "Descrição do curso"; "instrutor", "URL da imagem de capa", "Data de início", "Data de fim",
+  "Número de vagas", "Tipo do curso", "Link de inscrição", permitindo o cadastro de cursos com informações em branco.
 * **Resultado Atual:** O formulário é submetido com sucesso mesmo sem preenchimento.
 * **Resultado Esperado:** O sistema deve bloquear o cadastro e exibir alertas visuais nos campos obrigatórios.
 
