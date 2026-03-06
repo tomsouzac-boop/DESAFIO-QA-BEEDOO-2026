@@ -86,7 +86,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 | **CT-02** | Validação de campos obrigatórios | FALHOU | CRÍTICA    | Sistema permite salvar registros com campos vazios. |
 | **CT-03** | Listagem de cursos cadastrados   | PASSOU | Baixa      | Os cursos são exibidos corretamente na grid.        |
 | **CT-04** | Excluir um curso com sucesso     | FALHOU | CRÍTICA    | O registro permanece na base mesmo após a exclusão. |
-| **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | CRÍTICA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |
+| **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | CRÍTICA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |  
 
 ---
 
