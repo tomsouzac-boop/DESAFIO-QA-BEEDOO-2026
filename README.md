@@ -67,7 +67,7 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ### **CT-05: Validar impedimento de cadastro duplicado**
 * **Dado** que já existe um curso cadastrado com o nome "Curso de Teste de QA" e instrutor "Elton Costa"
-* **Quand** tento cadastrar um novo curso com exatamente os mesmos dados (Nome e Instrutor)
+* **Quando** tento cadastrar um novo curso com exatamente os mesmos dados (Nome e Instrutor)
 * **Então** o sistema deve exibir uma mensagem de alerta: "Este curso já está cadastrado"
 * **E** não deve permitir a criação do registro duplicado na listagem.
 
@@ -75,7 +75,7 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ### **CT-06: Validar geração de link de acesso na listagem**
 * **Dado** que realizei o cadastro de um novo curso com sucesso
-* **Quand** acesso a tela de "LISTA DE CURSOS"
+* **Quando** acesso a tela de "LISTA DE CURSOS"
 * **E** tento clicar no título ou no card do curso recém-criado para acessar seu conteúdo
 * **Então** o sistema deve me redirecionar para a página específica do curso
 * **E** a URL deve conter o identificador correto do registro.
@@ -95,7 +95,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 | **CT-02** | Validação de campos obrigatórios | FALHOU | CRÍTICA    | Sistema permite salvar registros com campos vazios. |
 | **CT-03** | Listagem de cursos cadastrados   | PASSOU | BAIXA      | Os cursos são exibidos corretamente na grid.        |
 | **CT-04** | Excluir um curso com sucesso     | FALHOU | CRÍTICA    | O registro permanece na base mesmo após a exclusão. |
-| **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | CRÍTICA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |  
+| **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | ALTA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |  
 | **CT-06** | Validar geração de link de acesso na listagem     | FALHOU | CRÍTICA    | O sistema renderiza o card do curso na listagem, mas não gera um hyperlink que permita ao usuário acessar os detalhes do curso. O componente está estático, impedindo o consumo do conteúdo. | 
 
 ---
@@ -134,7 +134,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 
 ---
 
-* **Nota do QA:** Os bugs **BUG-02 (Validação)**, **BUG-04 (Exclusão)** e **BUG-06 (Link de Acesso)**, quando analisados em conjunto, sugerem uma falha crítica na camada de persistência e na sincronia entre o banco de dados e a interface. Isso compromete o ciclo de vida básico da aplicação (**CRUD**), afetando diretamente a confiabilidade do produto e a experiência do usuário final.
+* **Nota do QA:** Os bugs **BUG-01 (Validação)**, **BUG-02 (Exclusão)** e **BUG-03 (Link de Acesso)**, quando analisados em conjunto, sugerem uma falha crítica na camada de persistência e na sincronia entre o banco de dados e a interface. Isso compromete o ciclo de vida básico da aplicação (**CRUD**), afetando diretamente a confiabilidade do produto e a experiência do usuário final.
 
 ---
 
