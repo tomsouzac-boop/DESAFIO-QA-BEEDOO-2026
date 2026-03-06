@@ -67,7 +67,7 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ## 3. Registro de Bugs Encontrados
 Durante a execução dos testes, foram identificados os seguintes problemas:
-Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status de cada execução e observações técnicas.
+* Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status de cada execução e observações técnicas.
 
 * **Plano de Testes e Resultados de Execução**
 
