@@ -57,11 +57,19 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 ---
 
 ### **CT-04: Excluir um curso com sucesso**
-* **Dado** que existe pelo menos um curso cadastrado na "LISTAR CURSOS""
+* **Dado** que existe pelo menos um curso cadastrado na "LISTAR CURSOS"
 * **Quando** clico no botão de "Excluir" (ícone de lixeira) do curso desejado
 * **E** confirmo a exclusão na janela de alerta (pop-up)
 * **Então** o sistema deve exibir uma mensagem de sucesso: "Curso removido com sucesso"
 * **E** o registro deve desaparecer da listagem imediatamente sem necessidade de atualizar a página.
+
+---
+
+### **CT-05: Validar impedimento de cadastro duplicado
+* **Dado** que já existe um curso cadastrado com o nome "Automação de Testes" e instrutor "Elton Costa"
+* **Quand** tento cadastrar um novo curso com exatamente os mesmos dados (Nome e Instrutor)
+* **Então** o sistema deve exibir uma mensagem de alerta: "Este curso já está cadastrado"
+* **E** não deve permitir a criação do registro duplicado na listagem.
 
 ---
 
@@ -78,6 +86,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 | **CT-02** | Validação de campos obrigatórios | FALHOU | CRÍTICA    | Sistema permite salvar registros com campos vazios. |
 | **CT-03** | Listagem de cursos cadastrados   | PASSOU | Baixa      | Os cursos são exibidos corretamente na grid.        |
 | **CT-04** | Excluir um curso com sucesso     | FALHOU | CRÍTICA    | O registro permanece na base mesmo após a exclusão. |
+| **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | CRÍTICA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |
 
 ---
 
