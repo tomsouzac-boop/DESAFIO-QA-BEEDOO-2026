@@ -119,6 +119,22 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 * **Resultado Atual:** O registro permanece visível e persistido.
 * **Resultado Esperado:** O curso deve ser removido permanentemente da listagem e do banco de dados.
 
+### **BUG-03: Falha de Roteamento e Ausência de Link de Acesso (CT-06)**
+* **Severidade:** **CRÍTICA** (Impede o consumo do produto principal).
+* **Descrição:** Após o cadastro bem-sucedido de um curso, o card correspondente é renderizado na tela de "LISTA DE CURSOS", porém o título e o card não possuem um elemento de link funcional (`href`). Isso impossibilita que o usuário acesse os detalhes, lições ou a página interna do curso criado.
+* **Passos para Reproduzir:**
+    1.  Realizar o cadastro de um curso preenchendo os campos obrigatórios.
+    2.  Navegar até a tela de **"LISTA DE CURSOS"**.
+    3.  Tentar clicar no nome do curso ou sobre o card para abrir os detalhes.
+    4.  Observar que o cursor do mouse não altera para "pointer" (mãozinha) e nenhuma ação de redirecionamento é disparada.
+* **Resultado Atual:** O registro é exibido visualmente na listagem, mas permanece como um elemento estático, sem gerar uma URL de acesso ou link de navegação.
+* **Resultado Esperado:** O título do curso (ou um botão específico de "Acessar") deve ser um hyperlink funcional que redirecione o usuário para a rota de detalhes (ex: `/detalhes-curso/ID_DO_CURSO`).
+* **Possível Causa Técnica:** Falha na lógica de renderização do Front-end, onde o ID retornado pela API não está sendo vinculado ao componente de link, ou ausência de configuração de rotas dinâmicas no projeto (SPA).
+
+---
+
+* **Nota do QA:** Os bugs **BUG-02 (Validação)**, **BUG-04 (Exclusão)** e **BUG-06 (Link de Acesso)**, quando analisados em conjunto, sugerem uma falha crítica na camada de persistência e na sincronia entre o banco de dados e a interface. Isso compromete o ciclo de vida básico da aplicação (**CRUD**), afetando diretamente a confiabilidade do produto e a experiência do usuário final.
+
 ---
 
 ## Sugestões de Melhorias (UX & Regras de Negócio)
