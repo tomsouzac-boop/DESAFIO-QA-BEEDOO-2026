@@ -112,7 +112,8 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 ### **BUG-02: Falha Funcional na Persistência de Exclusão (CT-04)**
 * **Severidade:** **CRÍTICA** (Viola as regras de negócio do CRUD).
 * **Descrição:** Ao acionar o comando de exclusão e confirmar no pop-up, o sistema não remove o registro da base de dados.
-* **Passos para Reproduzir:** 1. Localizar um curso na lista.
+* **Passos para Reproduzir:**
+    1. Localizar um curso na lista.
     2. Clicar no ícone de lixeira.
     3. Confirmar a exclusão.
     4. Atualizar a página (F5).
