@@ -56,6 +56,15 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ---
 
+### **CT-04: Excluir um curso com sucesso**
+* **Dado** que existe pelo menos um curso cadastrado na "LISTAR CURSOS""
+* **Quando** clico no botão de "Excluir" (ícone de lixeira) do curso desejado
+* **E** confirmo a exclusão na janela de alerta (pop-up)
+* **Então** o sistema deve exibir uma mensagem de sucesso: "Curso removido com sucesso"
+* **E** o registro deve desaparecer da listagem imediatamente sem necessidade de atualizar a página.
+
+---
+
 ## 3. Registro de Bugs Encontrados
 Durante a execução dos testes, foram identificados os seguintes problemas:
 
