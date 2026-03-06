@@ -107,16 +107,16 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 Para elevar a qualidade da aplicação e a experiência do usuário, foram identificadas as seguintes oportunidades de melhoria:
 
 1. **Implementação de Sistema de Filtros Avançados:**
-   - Adicionar um campo de busca global na "LISTA DE CURSOS" que permita a filtragem dinâmica por **Título do curso**, **Nome do Instrutor** e **Tipo de curso**.
-   - *Motivo:* Facilita a escalabilidade do sistema quando houver um grande volume de dados cadastrados.
+   * Adicionar um campo de busca global na "LISTA DE CURSOS" que permita a filtragem dinâmica por **Título do curso**, **Nome do Instrutor** e **Tipo de curso**.
+   * *Motivo:* Facilita a escalabilidade do sistema quando houver um grande volume de dados cadastrados.
 
 2. **Regra de Unicidade (Evitar Duplicidade):**
-   - Implementar uma validação no backend/frontend que impeça o cadastro de cursos com o mesmo nome e instrutor já existentes na base.
-   - *Motivo:* Garante a integridade da base de dados e evita poluição visual na listagem para o usuário final.
+   * Implementar uma validação no backend/frontend que impeça o cadastro de cursos com o mesmo nome e instrutor já existentes na base.
+   * *Motivo:* Garante a integridade da base de dados e evita poluição visual na listagem para o usuário final.
 
 3. **Feedback de Ações (Toasts/Alertas):**
-   - Adicionar notificações visuais (ex: cantos da tela) após ações de Cadastro, Edição e Exclusão.
-   - *Motivo:* Melhora a percepção de sucesso ou erro da operação realizada.
+   * Adicionar notificações visuais (ex: cantos da tela) após ações de Cadastro, Edição e Exclusão.
+   * *Motivo:* Melhora a percepção de sucesso ou erro da operação realizada.
 
 ---
 
