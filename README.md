@@ -24,7 +24,7 @@ O sistema tem como objetivo principal o **gerenciamento de cursos**, permitindo 
 ---
 
 ## 2. Cenários e Casos de Teste
-A documentação detalhada com os passos, resultados esperados e critérios de aceite (Gherkin) está disponível no link abaixo:
+A documentação detalhada com os passos, resultados esperados e critérios de aceite (Gherkin), estam disponíveis no link abaixo:
 
 👉 **[https://docs.google.com/spreadsheets/d/1jTlhlIxeFiyEtN9nBMO5G7AlfYcXVjfZT0WhXLtPNTE/edit?usp=sharing]** *(link do Google Sheets)*
 
