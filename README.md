@@ -73,6 +73,15 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ---
 
+### **CT-06: Validar geração de link de acesso na listagem**
+* **Dado** que realizei o cadastro de um novo curso com sucesso
+* **Quand** acesso a tela de "LISTA DE CURSOS"
+* **E** tento clicar no título ou no card do curso recém-criado para acessar seu conteúdo
+* **Então** o sistema deve me redirecionar para a página específica do curso
+* **E** a URL deve conter o identificador correto do registro.
+
+---
+
 ## 3. Registro de Bugs Encontrados
 Durante a execução dos testes, foram identificados os seguintes problemas:
 
@@ -87,6 +96,7 @@ Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status d
 | **CT-03** | Listagem de cursos cadastrados   | PASSOU | Baixa      | Os cursos são exibidos corretamente na grid.        |
 | **CT-04** | Excluir um curso com sucesso     | FALHOU | CRÍTICA    | O registro permanece na base mesmo após a exclusão. |
 | **CT-05** | Validar impedimento de cadastro duplicado     | FALHOU | CRÍTICA    | O sistema permite cadastrar o mesmo curso múltiplas vezes, gerando redundância de dados. |  
+| **CT-06** | Validar geração de link de acesso na listagem     | FALHOU | CRÍTICA    | O sistema renderiza o card do curso na listagem, mas não gera um hyperlink que permita ao usuário acessar os detalhes do curso. O componente está estático, impedindo o consumo do conteúdo. | 
 
 ---
 
