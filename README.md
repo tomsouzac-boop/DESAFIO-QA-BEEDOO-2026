@@ -49,10 +49,10 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ---
 
-### **CT-03: Busca/Filtro na listagem de cursos**
+### **CT-03: Listagem de cursos**
 * **Dado** que existem cursos cadastrados na "LISTA DE CURSOS"
-* **Quando** digito o nome de um curso específico no campo de busca
-* **Então** a tabela deve filtrar e exibir apenas os resultados correspondentes.
+* **Quando** Clico na “LISTA DE CURSOS”
+* **Então** Deverá aparecer os cursos cadastrados.
 
 ---
 
