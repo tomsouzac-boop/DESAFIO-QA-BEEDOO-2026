@@ -26,11 +26,11 @@ O sistema tem como objetivo principal o **gerenciamento de cursos**, permitindo 
 ## 2. Cenários e Casos de Teste
 A documentação detalhada com os passos, resultados esperados e critérios de aceite (Gherkin), estão disponíveis no link abaixo:
 
-👉 **[https://docs.google.com/spreadsheets/d/1jTlhlIxeFiyEtN9nBMO5G7AlfYcXVjfZT0WhXLtPNTE/edit?usp=sharing]** *(link do Google Sheets)*
+**[https://docs.google.com/spreadsheets/d/1jTlhlIxeFiyEtN9nBMO5G7AlfYcXVjfZT0WhXLtPNTE/edit?usp=sharing]** *(link do Google Sheets)*
 
 ---
 
-## 📝 Cenários de Teste BDD
+## Cenários de Teste BDD
 
 ### **CT-01: Cadastro de curso com sucesso**
 * **Dado** que estou na tela de "CADASTRAR CURSO"
@@ -67,19 +67,61 @@ A documentação detalhada com os passos, resultados esperados e critérios de a
 
 ## 3. Registro de Bugs Encontrados
 Durante a execução dos testes, foram identificados os seguintes problemas:
+Abaixo estão detalhados os cenários de teste aplicados, seguidos pelo status de cada execução e observações técnicas.
 
-#### **BUG-01: [Título Resumido do Erro]**
-* **Passos para reproduzir:** 1. Acessar tal tela; 2. Clicar em tal botão; 3. Preencher X.
-* **Resultado Atual:** [O que aconteceu de errado]
-* **Resultado Esperado:** [O que deveria ter acontecido]
-* **Severidade:** [Crítica / Alta / Média / Baixa]
+* **Plano de Testes e Resultados de Execução**
+
+| ID        | Cenário de Teste                 | Status | Severidade | Observações                                         |
+| **CT-01** | Cadastro de curso com sucesso    | PASSOU | Baixa      | Fluxo executado conforme o esperado.                |
+| **CT-02** | Validação de campos obrigatórios | FALHOU | CRÍTICA    | Sistema permite salvar registros com campos vazios. |
+| **CT-03** | Listagem de cursos cadastrados   | PASSOU | Baixa      | Os cursos são exibidos corretamente na grid.        |
+| **CT-04** | Excluir um curso com sucesso     | FALHOU | CRÍTICA    | O registro permanece na base mesmo após a exclusão. |
+
+---
+
+## Detalhamento dos Bugs Encontrados
+
+### **BUG-01: Ausência de Validação em Campos Mandatórios (CT-02)**
+* **Severidade:** **CRÍTICA** (Impacta a integridade dos dados).
+* **Descrição:** O sistema não valida a presença de dados nos campos "Nome do Curso", "Descrição do curso"; "instrutor", "URL da imagem de capa", "Data de inicio", "Data de fim",
+  "Número de vagas", Tipo do curso", "Link de inscrição", permitindo o cadastro de cursos com informações em branco.
+* **Resultado Atual:** O formulário é submetido com sucesso mesmo sem preenchimento.
+* **Resultado Esperado:** O sistema deve bloquear o cadastro e exibir alertas visuais nos campos obrigatórios.
+
+### **BUG-02: Falha Funcional na Persistência de Exclusão (CT-04)**
+* **Severidade:** **CRÍTICA** (Viola as regras de negócio do CRUD).
+* **Descrição:** Ao acionar o comando de exclusão e confirmar no pop-up, o sistema não remove o registro da base de dados.
+* **Passos para Reproduzir:** 1. Localizar um curso na lista.
+    2. Clicar no ícone de lixeira.
+    3. Confirmar a exclusão.
+    4. Atualizar a página (F5).
+* **Resultado Atual:** O registro permanece visível e persistido.
+* **Resultado Esperado:** O curso deve ser removido permanentemente da listagem e do banco de dados.
+
+---
+
+## Sugestões de Melhorias (UX & Regras de Negócio)
+
+Para elevar a qualidade da aplicação e a experiência do usuário, foram identificadas as seguintes oportunidades de melhoria:
+
+1. **Implementação de Sistema de Filtros Avançados:**
+   - Adicionar um campo de busca global na "LISTA DE CURSOS" que permita a filtragem dinâmica por **Título do curso**, **Nome do Instrutor** e **Tipo de curso**.
+   - *Motivo:* Facilita a escalabilidade do sistema quando houver um grande volume de dados cadastrados.
+
+2. **Regra de Unicidade (Evitar Duplicidade):**
+   - Implementar uma validação no backend/frontend que impeça o cadastro de cursos com o mesmo nome e instrutor já existentes na base.
+   - *Motivo:* Garante a integridade da base de dados e evita poluição visual na listagem para o usuário final.
+
+3. **Feedback de Ações (Toasts/Alertas):**
+   - Adicionar notificações visuais (ex: cantos da tela) após ações de Cadastro, Edição e Exclusão.
+   - *Motivo:* Melhora a percepção de sucesso ou erro da operação realizada.
 
 ---
 
 ## 4. Evidências de Execução
 Os prints e gravações de tela comprovando os testes realizados podem ser acessados na pasta abaixo:
 
-📁 **[LINK PARA O GOOGLE DRIVE/PASTA DE EVIDÊNCIAS]**
+**[LINK PARA O GOOGLE DRIVE/PASTA DE EVIDÊNCIAS]**
 
 ---
 **Candidato:** [Elton de Souza Costa]
